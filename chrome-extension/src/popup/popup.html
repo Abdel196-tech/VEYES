@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VEYES</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <h1>VEYES</h1>
+      <p class="subtitle">Voice bridge control</p>
+
+      <label for="wsUrl">Orchestrator WebSocket</label>
+      <input id="wsUrl" type="url" placeholder="ws://localhost:8765/ws" />
+
+      <div class="actions">
+        <button id="startBtn" type="button">Start</button>
+        <button id="stopBtn" type="button">Stop</button>
+      </div>
+
+      <p class="status-row">
+        <strong>Status:</strong>
+        <span id="statusText">Idle</span>
+      </p>
+    </main>
+    <script src="./popup.js"></script>
+  </body>
+</html>

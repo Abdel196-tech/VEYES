@@ -1,0 +1,24 @@
+{
+  "name": "VEYES Voice Navigator",
+  "description": "Accessible voice-first browser assistant bridge.",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "minimum_chrome_version": "116",
+  "permissions": ["storage", "offscreen", "activeTab", "scripting", "tabs"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "src/background/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "VEYES",
+    "default_popup": "src/popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/content/content-script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
