@@ -140,7 +140,7 @@ async function connectWebSocket(wsUrl) {
               tts_audio_url: true
             }
           },
-          { sessionId }
+          {}
         )
       );
       resolve();

@@ -172,7 +172,7 @@ async function ensureOffscreenDocument() {
   }
 
   await chrome.offscreen.createDocument({
-    url: OFFSCREEN_DOCUMENT_PATH,
+    url: chrome.runtime.getURL(OFFSCREEN_DOCUMENT_PATH),
     reasons: ["USER_MEDIA", "AUDIO_PLAYBACK"],
     justification: "Capture microphone audio and play speech feedback for accessible navigation."
   });
